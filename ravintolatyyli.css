@@ -1,203 +1,274 @@
 
 
 .navbar-custom {
-    background-color: #e6d9c1;
+  background-color: #e6d9c1;
 }
 
 .navbar-custom a {
-    color: rgb(113, 63, 7);
-    font-family: "Dosis", sans-serif;
+  color: rgb(113, 63, 7);
+  font-family: "Dosis", sans-serif;
 }
 
 /* aktiivisen & hover-linkin väri */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: rgb(113, 63, 7);
-    
+  color: rgb(113, 63, 7);
+  
 }
 
 /*hampurilaiskuvion väri*/
 .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(113, 63, 7, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-  
-  /*reunuksen väri*/
-  .custom-toggler.navbar-toggler {
-    border-color: #713f07;
-  }
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(113, 63, 7, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
 
-  .nav-item .dropdown-menu a:hover {
-    color: #e6d9c1 !important;
-    background:rgb(113, 63, 7) !important;
-    cursor: pointer;
+/*reunuksen väri*/
+.custom-toggler.navbar-toggler {
+  border-color: #713f07;
+}
+
+.nav-item .dropdown-menu a:hover {
+  color: #e6d9c1 !important;
+  background:rgb(113, 63, 7) !important;
+  cursor: pointer;
 }
 
 .nav-link.active {
-  color: white !important;
+color: rgb(57, 6, 6) !important;
+background-color: #e6d9c1;
 }
 
 body { position: relative; 
+font-family: "Dosis", sans-serif;
 }
 
 
 
 .carousel-inner img {
-  width: 100%; /* Set width to 100% */
-  margin: auto;
-  max-height: 580px;
- }
+width: 100%; /* Set width to 100% */
+margin: auto;
+max-height: 580px;
+}
 
- .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23e6d9c1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-    }
+.carousel-control-prev-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23e6d9c1' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+
+  .carousel-control-next-icon {
+background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23e6d9c1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-caption {
+  font-family: "Dosis", sans-serif;
+}
+
+#ravintola{
+  padding-top: 70px;
+}
+
+.container img {
+  width: 100%;
+  max-width: 500 px;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+}
+
+.col-md-4 p {
+  font-family: "Dosis", sans-serif;
+  padding-top: 30px;
+}
+
+.card-container {
+  display: flex;          
+  padding-top: 70px;
+  gap: 20px;              /* Väli korttien välillä */
+  justify-content: space-between; /* Tasaa kortit horisontaalisesti */
+  align-items: stretch;
+  font-family: "Dosis", sans-serif;
+}
+
+.card {
+  flex: 1 1 25%;          /* Kortit vievät 25% leveyttä isolla näytöllä */
+  min-width: 250px;       /* Kortit eivät mene liian kapeiksi */
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;           /* Kortit venyvät samalle korkeudelle */
+  box-sizing: border-box;
+  align-self: stretch;
+}
+
+.card-container img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.kortti-ryhma {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+
+.kortti {
+  width: 100%;
+  max-width: 18rem;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.kortti-img-top {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.kortti-body {
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.kortti-footer {
+  padding: 0.75rem 1rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+  text-align: right;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.kortti-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.kortti-text {
+  font-size: 1rem;
+  color: #495057;
+}
+
+
+#accordion .card:first-child {
+  margin-top: 70px;
+}
+
+#accordion .card{
+  background-color: #e6d9c1;
+  font-family: "Dosis", sans-serif;
+  display: flex;
+  gap: 20px;
+}
+
+.card-img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.responsive-table {
+  width: 100%;         /* Taulukko vie koko sivun leveyden */
+  border-collapse: collapse; /* Yhdistää taulukon reunat */
+  margin-top: 70px;
+}
+
+.responsive-table th, .responsive-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd; /* Vaaleanharmaat reunat */
+}
+
+.responsive-table th {
+  background-color: #f4f4f4; /* Hieman vaaleampi taustaväri otsikoille */
+  font-weight: bold;
+}
+
+/* Responsiivisuus: kun näyttö on kapea, taulukko muuttuu korttimaiseksi */
+@media screen and (max-width: 768px) {
+  .responsive-table,
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+    display: block;  /* Tehdään taulukosta lohkotason elementtejä */
+  }
+
   
-    .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23e6d9c1' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  .responsive-table tr {
+    margin-bottom: 10px;  /* Väli rivien välillä */
   }
 
-  .carousel-caption {
-    font-family: "Dosis", sans-serif;
-  }
-
-  #ravintola{
-    padding-top: 70px;
-  }
-
-  .container img {
-    width: 100%;
-    max-width: 500 px;
-    border-top-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-  }
-
-  .col-md-4 p {
-    font-family: "Dosis", sans-serif;
-    padding-top: 30px;
-  }
-
-  .card-container {
-    display: flex;          
-    padding-top: 70px;
-    gap: 20px;              /* Väli korttien välillä */
-    justify-content: space-between; /* Tasaa kortit horisontaalisesti */
-    align-items: stretch;
-    font-family: "Dosis", sans-serif;
-  }
-  
-  .card {
-    flex: 1 1 25%;          /* Kortit vievät 25% leveyttä isolla näytöllä */
-    min-width: 250px;       /* Kortit eivät mene liian kapeiksi */
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;           /* Kortit venyvät samalle korkeudelle */
-    box-sizing: border-box;
-    align-self: stretch;
-  }
-
-  .card-container img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  #accordion .card:first-child {
-    margin-top: 70px;
-  }
-
-  #accordion .card{
-    background-color: #e6d9c1;
-    font-family: "Dosis", sans-serif;
-    display: flex;
-    gap: 20px;
-  }
-
-  .card-img {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  .card-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
- 
-  .responsive-table {
-    width: 100%;         /* Taulukko vie koko sivun leveyden */
-    border-collapse: collapse; /* Yhdistää taulukon reunat */
-    margin-top: 70px;
-  }
-  
-  .responsive-table th, .responsive-table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd; /* Vaaleanharmaat reunat */
-  }
-  
   .responsive-table th {
-    background-color: #f4f4f4; /* Hieman vaaleampi taustaväri otsikoille */
+    display: none;  /* Piilottaa taulukon otsikot */
+  }
+
+  .responsive-table td {
+    display: flex;
+    justify-content: space-between; /* Asetetaan sisällön elementit vierekkäin */
+    position: relative;
+    padding-left: 50%; /* Teksti siirtyy oikealle, jotta label voidaan lisätä vasemmalle */
+  }
+
+  .responsive-table td::before {
+    content: attr(data-label);  /* Käytetään "data-label"-attribuuttia, joka määrittää, mitä tekstiä näytetään */
+    position: absolute;
+    left: 10px;
     font-weight: bold;
   }
-  
-  /* Responsiivisuus: kun näyttö on kapea, taulukko muuttuu korttimaiseksi */
-  @media screen and (max-width: 768px) {
-    .responsive-table,
-    .responsive-table thead,
-    .responsive-table tbody,
-    .responsive-table th,
-    .responsive-table td,
-    .responsive-table tr {
-      display: block;  /* Tehdään taulukosta lohkotason elementtejä */
-    }
-  
-    
-    .responsive-table tr {
-      margin-bottom: 10px;  /* Väli rivien välillä */
-    }
-  
-    .responsive-table th {
-      display: none;  /* Piilottaa taulukon otsikot */
-    }
-  
-    .responsive-table td {
-      display: flex;
-      justify-content: space-between; /* Asetetaan sisällön elementit vierekkäin */
-      position: relative;
-      padding-left: 50%; /* Teksti siirtyy oikealle, jotta label voidaan lisätä vasemmalle */
-    }
-  
-    .responsive-table td::before {
-      content: attr(data-label);  /* Käytetään "data-label"-attribuuttia, joka määrittää, mitä tekstiä näytetään */
-      position: absolute;
-      left: 10px;
-      font-weight: bold;
-    }
 
+}
+
+  label.muoto {display:inline-block;  
+    width:6em; 
+    vertical-align: top;
+  } 
+
+  .lomake {
+    margin-top: 70px;
+    background-color: #e6d9c1;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 70px;
   }
-  
-    label.muoto {display:inline-block;  
-      width:6em; 
-      vertical-align: top;
-    } 
 
-    .lomake {
-      margin-top: 70px;
-      background-color: #e6d9c1;
-      border-radius: 8px;
-      display: inline-block;
-      margin-bottom: 70px;
-    }
+  ::placeholder {
+    color: rgb(113, 63, 7);
+  }
 
-    ::placeholder {
-      color: rgb(113, 63, 7);
-    }
+ #videoTabs{
+  margin-top: 70px;
+  width: 900px;
+ }
 
- 
+ .tab-content {
+  width: 900px;
+ }
+
+.nav-link {
+  background-color: #e6d9c1;
+  color: rgb(113, 63, 7);
+}
+
+
 
 
