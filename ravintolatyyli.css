@@ -162,27 +162,68 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.
 }
 
 
+/* Yleinen asettelu (isoilla näytöillä) */
 #accordion .card:first-child {
-  margin-top: 70px;
+margin-top: 70px;
 }
 
-#accordion .card{
-  background-color: #e6d9c1;
-  font-family: "Dosis", sans-serif;
-  display: flex;
-  gap: 20px;
+#accordion .card {
+background-color: #e6d9c1;
+font-family: "Dosis", sans-serif;
+display: flex;
+gap: 20px;
 }
 
 .card-img {
-  width: 300px;
+width: 300px;
+height: auto;
+border-radius: 8px;
+}
+
+.card-content {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+/* Media query pienille näytöille (max-width: 768px) */
+@media (max-width: 768px) {
+/* Korttien ja tekstin asettelu pienemmillä näytöillä */
+#accordion .card {
+  display: block; /* Kortti menee pystysuoraan */
+  margin-top: 20px; /* Väliä korttien välillä */
+}
+
+.card-content {
+  display: block; /* Teksti ja kuva menevät päällekkäin */
+  gap: 10px; /* Väli teksteille ja kuville */
+}
+
+.card-img {
+  width: 100%; /* Kuva vie koko kortin leveysalueen */
   height: auto;
   border-radius: 8px;
 }
 
+.card-body {
+  padding: 10px; /* Vähemmän tilaa kortin sisällä */
+}
+}
+
+/* Media query vielä pienemmille näytöille (max-width: 576px) */
+@media (max-width: 576px) {
+.card-img {
+  width: 100%; /* Kuva vie koko alueen */
+  height: auto;
+}
+
 .card-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  padding: 10px; /* Vähemmän väliä elementtien välillä */
+}
+
+.card-header {
+  font-size: 1rem; /* Pienennetään otsikon kokoa */
+}
 }
 
 .responsive-table {
@@ -269,6 +310,36 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.
   color: rgb(113, 63, 7);
 }
 
+/* Media query pienille näytöille */
+@media (max-width: 768px) {
+/* Videon säilyttäminen responsiivisena */
+.ratio {
+  width: 100%;
+  height: auto;
+}
+
+/* Tab-alueen leveys pienemmille näytöille */
+#videoTabs, .tab-content {
+  width: 100%;  /* Skaalaa koko leveys */
+}
+
+/* Vähentää tabien sisäistä väliä */
+.nav-link {
+  font-size: 0.9rem;  /* Vähentää fonttikokoa */
+  padding: 0.5rem;    /* Pienempi padding */
+}
+}
+
+@media (max-width: 576px) {
+/* Vielä pienemmille näytöille, kuten puhelimille */
+#videoTabs, .tab-content {
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 0.8rem;  /* Vähentää fonttikokoa enemmän */
+}
+}
 
 
 
