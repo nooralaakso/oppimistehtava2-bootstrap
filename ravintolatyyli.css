@@ -225,59 +225,36 @@ gap: 20px;
   font-size: 1rem; /* Pienennetään otsikon kokoa */
 }
 }
+
 .responsive-table {
-  width: 100%; /* Taulukko vie koko sivun leveyden */
-  border-collapse: collapse; /* Yhdistää taulukon reunat */
-  margin-top: 70px;
-  overflow-x: auto; /* Lisää mahdollisuus vierittää taulukkoa vaakasuunnassa */
-  display: block; /* Varmistaa, että taulukko on responsiivinen */
+width: 100%;         /* Taulukko vie koko sivun leveyden */
+border-collapse: collapse; /* Yhdistää taulukon reunat */
+margin-top: 70px;
 }
 
 .responsive-table th, .responsive-table td {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ddd; /* Vaaleanharmaat reunat */
-  word-wrap: break-word; /* Tekstin automaattinen rajaaminen, jos se menee yli */
+padding: 10px;
+text-align: left;
+border: 1px solid #ddd; /* Vaaleanharmaat reunat */
 }
 
 .responsive-table th {
-  background-color: #f4f4f4; /* Hieman vaaleampi taustaväri otsikoille */
-  font-weight: bold;
+background-color: #f4f4f4; /* Hieman vaaleampi taustaväri otsikoille */
+font-weight: bold;
+}
+
+/* Lisää vierityspalkki sivuttaiseen suuntaan */
+.responsive-table-wrapper {
+overflow-x: auto; /* Mahdollistaa vaakasuoran vierityksen */
+-webkit-overflow-scrolling: touch; /* Parantaa vierityskokemusta mobiililaitteilla */
+margin-top: 10px; /* Lisää tilaa yläpuolelle */
 }
 
 /* Responsiivisuus pienille näytöille */
 @media screen and (max-width: 768px) {
-  .responsive-table,
-  .responsive-table thead,
-  .responsive-table tbody,
-  .responsive-table th,
-  .responsive-table td,
-  .responsive-table tr {
-    display: block;  /* Tehdään taulukosta lohkotason elementtejä */
-  }
-
-  .responsive-table tr {
-    margin-bottom: 10px;  /* Väli rivien välillä */
-  }
-
-  .responsive-table th {
-    display: none;  /* Piilottaa taulukon otsikot */
-  }
-
-  .responsive-table td {
-    display: flex;
-    justify-content: space-between; /* Asetetaan sisällön elementit vierekkäin */
-    position: relative;
-    padding-left: 50%; /* Teksti siirtyy oikealle, jotta label voidaan lisätä vasemmalle */
-    width: 100%; /* Varmistetaan, että solut vievät koko tilan */
-  }
-
-  .responsive-table td::before {
-    content: attr(data-label);  /* Käytetään "data-label"-attribuuttia, joka määrittää, mitä tekstiä näytetään */
-    position: absolute;
-    left: 10px;
-    font-weight: bold;
-  }
+.responsive-table {
+  width: 100%; /* Varmistaa, että taulukko vie koko tilan */
+}
 }
 
   label.muoto {display:inline-block;  
